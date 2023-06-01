@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery Mobile</title>
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+      li {
+        list-style: none;
+      }
+      .picture {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .picture li {
+        float: left;
+        width: 50%;
+      }
+      .picture li a {
+        display: block;
+        margin: 5px;
+        border: 1px;
+      }
+      .picture li img {
+        display: block;
+        width: 50%;
+        height: auto;
+      }
+      .picture li img:hover {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div data-theme="b">
+      <div data-role="page" id="home">
+        <div data-role="header" data-theme="b">
+          <h1>회사 소개 앱</h1>
+        </div>
+        <div data-role="content" style="text-align: center">
+          <img src="naver.png" style="max-width: 100%;"/>
+          <ul data-role="listview" data-inset="true">
+            <li><a href="#intro">회사 소개</a></li>
+            <li><a href="#movie" data-rel="dialog">회사 영상</a></li>
+            <li><a href="#gallery">회사 사진</a></li>
+          </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+          <h1>회사소개_전유림</h1>
+        </div>
+      </div>
+
+      <div data-role="page" id="intro" data-theme="b">
+        <div data-role="header" data-theme="b">
+          <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+          <h1>회사 소개</h1>
+        </div>
+        <div data-role="content" height="100%">
+          <div style="text-align: center" >
+            <img src="naver1.jpg" width="100%"
+			/>
+          </div>
+          <div
+            data-role="collapsible-set"
+            data-theme="b"
+            data-content-theme="e"
+          >
+            <div data-role="collapsible" data-collapsed="false">
+              <h3>회사 역사</h3>
+              <p>
+                1998년 1월 네이버 정식 서비스가 시작되었다. 네이버는
+                '항해하다'라는 뜻의 Navigate와 '-하는 사람'의 뜻을 가진 접미사
+                -er이 만나 탄생한 이름이다. 이는 '정보의 바다라고 일컫는
+                인터넷을 항해하는 사람'을 의미한다. 1999년 6월 네이버컴(주)가
+                설립, '네이버' 정식 서비스와 어린이 전용 포털인 '쥬니어네이버'
+                서비스가 시작되었다. 2000년 5월 '네이버 뉴스' 서비스가
+                시작되었다. 2000년 8월 '네이버 통합검색' 서비스가 시작되었다.
+                2001년 5월 '네이버 키워드 광고' 서비스와 '네이버 쇼핑' 서비스가
+                시작되었다. 2002년 10월 '네이버 지식검색' 서비스가 시작되었다.
+                2003년 10월 '네이버 블로그' 서비스와 '네이버 지식쇼핑' 서비스가
+                시작되었다. 2003년 12월 '네이버 카페' 서비스가 시작되었다.
+                2004년 5월 '네이버 지역정보검색' 서비스가 시작되었다. 2004년 6월
+                '네이버 웹툰' 서비스가 시작되었다. 2004년 9월 '네이버 책'
+                서비스가 시작되었다. 2005년 5월 '네이버 실시간 검색순위'
+                서비스가 시작되었다. 2005년 8월 '네이버폰' 서비스가 시작되었다.
+                2005년 12월 '네이버 동영상 검색' 오픈 베타 서비스가 시작되었다.
+                2006년 6월 만화 UCC 기반 커뮤니티 서비스 '네이버 툰' 오픈되었다.
+                2008년 6월 자체 개발 '네이버 지도' 서비스가 시작되었다. 2009년
+                6월 네이버 모바일 웹 전용 서비스가 시작되었다. 2009년 7월 개인
+                별 웹 저장공간 서비스인 'N드라이브'가 시작되었다. 2009년 12월
+                '네이버폰' 서비스가 종료되었다. 2010년 2월 키자니아 서울 내
+                '대학' 체험관 이 개장되었다. 2010년 3월 네이버 그린팩토리가
+                개장되었다. 2010년 9월 '네이버 거리뷰' 지도 서비스가 오픈되었다.
+                마켓형 서비스 '샵N' 오픈 및 검색어 검증위원회 설립 발표를
+                하였다. 2012년 8월 지인 초대 기반 모바일 SNS '밴드(BAND)'가
+                시작되었다.(이후 2013년 8월 분사한 캠프모바일로 서비스 이관)
+                2013년 4월 네이버 '자연어 검색' 서비스가 시작되었다. 2013년 6월
+                강원도 춘천시에 데이터 센터 '각'을 준공했다. 2013년 7월
+                관계형 컨텐츠 기반의 네이버 NCR Mash-up 검색서비스가 시작되었다.
+                2013년 8월에는 네이버(주)로 사명을 변경하였다. 2015년 2월 '폴라'
+                베타서비스가 시작되었다. 2015년 9월 'V LIVE' 서비스가
+                시작되었다. 2016년 12월 '웨일' 베타서비스가 시작되었다. 2019년
+                8월 기준 대한민국 내 검색 점유율 58.8%[3]를 기록, 현재
+                대한민국에서 가장 많은 사람들이 사용하는 인터넷 포털 사이트이다.
+                2019년 11월 지식iN eXpert 베타서비스 시작 및 이슈별 보기 등의
+                맞춤형 실검을 개편하였다. 2020년 2월 '인플루언서 검색' 서비스가
+                정식 시작되었다.
+              </p>
+            </div>
+            <div data-role="collapsible">
+              <h3>회사 위치</h3>
+              <p>
+                경기 성남시 분당구 정자일로 95 수인분당 신분당 정자역 3번
+                출구에서967m
+              </p>
+            </div>
+            <div data-role="collapsible">
+              <h3>회사 복지</h3>
+              <ul>
+                <li>
+                  - 대부분의 결재에 조직장이 승인하는 절차를 최소화 하고 있으며
+                  개인 휴가 신청, 복리후생 관련 신청 등은 본인 승인만으로 결재
+                  완료
+                </li>
+                <li>
+                  - 붙여쓰면 지원금: 연차 이틀 이상 붙여 사용시 1일 X 5만원 휴가비
+                  지원
+                </li>
+                <li>
+                  - 자기돌봄 휴직: 3년 이상 근속 시 자기개발이나 휴식을 위해 최대
+                  6개월까지 무급 휴직 가능
+                </li>
+                <li>
+                  - 가족돌봄 휴가: 가족의 간호 및 돌봄이 필요한 경우 최대 90일까지
+                  사용할 수 있는 무급 휴가
+                </li>
+                <li><a
+                  href="https://bokziri.notion.site/37f342bf191a47c98d57535bb3a4386a"
+                  >등 많아서 생략</a></li>
+                
+              </ㅐl>
+            </div>
+          </div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+          <h1>회사소개_전유림</h1>
+        </div>
+      </div>
+
+      <div data-role="page" id="movie" data-theme="b">
+        <div data-role="header" data-position="fixed" data-theme="b">
+          <h1>영상</h1>
+        </div>
+        <div data-role="content">
+          <div class="ui-bar ui-bar-a">네이버 소개 동영상</div>
+          <br />
+          <li>
+            <iframe
+              width="100%"
+              height="240"
+              src="https://www.youtube.com/embed/6qoS7IFz1-4"
+              title="네이버 1784 브랜드필름 | THE TESTBED"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </li>
+          <br />
+        </div>
+        <div data-role="footer" data-theme="b"></div>
+      </div>
+      <div data-role="page" id="gallery" data-theme="b">
+        <div data-role="header" data-position="fixed" data-theme="b">
+          <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+          <h1>회사 사진</h1>
+        </div>
+        <div data-role="content">
+          <ul class="picture">
+            <li>
+              <a href="naver2.jpg" rel="external"><img src="naver2.jpg" /></a>
+            </li>
+            <li>
+              <a href="naver3.jpg" rel="external"><img src="naver3.jpg" /></a>
+            </li>
+            <li>
+              <a href="naver4.jpg" rel="external"><img src="naver4.jpg" /></a>
+            </li>
+            <li>
+              <a href="naver5.jpg" rel="external"><img src="naver5.jpg" /></a>
+            </li>
+            <li>
+              <a href="naver6.jpg" rel="external"><img src="naver6.jpg" /></a>
+            </li>
+            <li>
+              <a href="naver7.jpg" rel="external"><img src="naver7.jpg" /></a>
+            </li>
+          </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+          <h1>회사소개_전유림</h1>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
